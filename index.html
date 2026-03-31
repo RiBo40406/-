@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ゲームスタート画面</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#89CFF0, #ffffff);
+        font-family: sans-serif;
+    }
+
+    .container {
+        width: 300px;
+        text-align: center;
+        position: relative;
+    }
+
+    h1 {
+        margin-bottom: 30px;
+    }
+
+    .menu-button {
+        display: block;
+        width: 200px;
+        margin: 10px auto;
+        padding: 12px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    .menu-button:hover {
+        background-color: #45a049;
+    }
+
+    /* 右端の丸いボタン */
+    .icon-button {
+        position: absolute;
+        right: -70px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ffcc00;
+        cursor: pointer;
+        font-size: 24px;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>ゲームタイトル</h1>
+
+    <button class="menu-button" onclick="startGame()">はじめる</button>
+    <button class="menu-button" onclick="continueGame()">つづきから</button>
+    <button class="menu-button" onclick="resetGame()">リセット</button>
+
+    <!-- 丸いイラストボタン（仮で★） -->
+    <button class="icon-button" onclick="openMenu()">★</button>
+</div>
+
+<script>
+function startGame() {
+    alert("ゲーム開始！");
+}
+
+function continueGame() {
+    alert("続きから再開！");
+}
+
+function resetGame() {
+    if (confirm("本当にリセットしますか？")) {
+        alert("データをリセットしました");
+    }
+}
+
+function openMenu() {
+    alert("イラストボタンが押された！");
+}
+</script>
+
+</body>
+</html>
